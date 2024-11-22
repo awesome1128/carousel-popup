@@ -1,0 +1,423 @@
+/* external css: flickity.css */
+
+/* * { box-sizing: border-box; }
+
+body { font-family: sans-serif; } */
+
+.main-carousel {
+  background: #EEE;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  inset: 0px;
+  overflow: hidden;
+  z-index: 0;
+  align-items: center;
+  justify-content: center;
+  
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.56);
+  opacity: 0;
+  display: flex;
+  transition: opacity 500ms ease-in-out 0s;
+  animation: 300ms ease 0s 1 normal forwards running gWpsBT;/**/
+}
+
+.main-carousel .flickity-viewport {
+    width: 100%;
+    height: 400px !important;
+}
+
+.main-carousel .flickity-slider {
+    display: flex;
+    align-items: center;
+}
+
+.main-carousel .carousel-cell {
+  width: 50%;
+  height: 90%;
+  margin-right: 35px;
+  border-radius: 0px;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: cover;
+  background-color: #f8f8fa;
+  background-position-x: right;
+background-position-y: bottom;
+background-size: 600px 300px;
+}
+
+.main-carousel .carousel-cell.cell-1 {
+  background-image: url('https://test.growwithnoot.com/wp-content/uploads/2021/11/plant-food-microbe-1-1.jpg');
+}
+
+.main-carousel .carousel-cell.cell-2 {
+  background-image: url('https://test.growwithnoot.com/wp-content/uploads/2021/11/plant-food-microbe-2-1.jpg');
+}
+
+.main-carousel .carousel-cell.cell-3 {
+  background-image: url('https://test.growwithnoot.com/wp-content/uploads/2021/11/plant-food-microbe-3-1.jpg');
+}
+
+.main-carousel .carousel-cell.cell-4 {
+  background-image: url('https://test.growwithnoot.com/wp-content/uploads/2021/11/plant-food-microbe-4-1.jpg');
+}
+
+.main-carousel .carousel-cell.cell-5 {
+  background-image: url('https://test.growwithnoot.com/wp-content/uploads/2021/11/plant-food-microbe-5-1.jpg');
+}
+
+.main-carousel .carousel-cell.cell-6 {
+  background-image: url('https://test.growwithnoot.com/wp-content/uploads/2021/11/plant-food-microbe-6-1.jpg');
+}
+
+.main-carousel .carousel-cell .close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: transparent;
+  border: none;
+  outline: none;
+  width: 16px;
+  height: 16px;
+  padding: 0px;
+  display: flex;
+  -webkit-box-pack: end;
+  justify-content: flex-end;
+  z-index: 100;
+  cursor: pointer;
+}
+
+.main-carousel .carousel-cell h2 {
+  font-family: "Lexend", sans-serif;
+  font-weight: 500;
+  display: block;
+  text-align: left;
+  font-size: 1.375rem;
+  line-height: 2rem;
+  letter-spacing: -0.2px;
+  margin: 0px;
+  color: #00953B;
+}
+
+.main-carousel .carousel-cell p.gram {
+  font-family: "Lexend", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 300;
+  margin: 0px 0px 16px;
+  color: #7A7A7A;
+  border-bottom: 1px solid rgb(204, 204, 204);
+}
+
+.main-carousel .carousel-cell p.description {
+  font-family: "Lexend", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 300;
+  margin: 0px 0px 24px;
+  color: #7A7A7A;
+}
+
+.main-carousel .carousel-cell p.support {
+  font-family: "Lexend", sans-serif;
+  font-size: 0.875rem;
+  /*line-height: 1.25rem;*/
+  line-height: 0.5;
+  font-weight: 300;
+  /*margin: 0px 0px 24px;*/
+  color: #7A7A7A;
+}
+
+.main-carousel .carousel-cell .content div {
+  font-family: "Lexend", sans-serif;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  letter-spacing: 0.8px;
+  font-weight: 500;
+  margin: 0px 0px 8px;
+  color: rgba(20, 43, 111, 0.56);
+  text-transform: uppercase;
+}
+
+.main-carousel .carousel-cell a {
+  border-bottom: 2px solid #7A7A7A;;
+  font-family: "Lexend", sans-serif;
+  font-size: 0.875rem;
+  position: absolute;
+  text-decoration: none;
+  padding-bottom: 3px;
+  color: #7A7A7A;
+}
+
+.main-carousel .carousel-cell.is-selected {
+    /* background: cadetblue; */
+    height: 100%;
+    transition: max-height 0.3s ease-out;
+    /*transition: transform 550ms cubic-bezier(0.42, 0, 0.335, 1) 0s; */
+}
+
+/* cell number */
+/* .carousel-cell:before {
+  display: block;
+  text-align: center;
+  content: counter(carousel-cell);
+  line-height: 200px;
+  font-size: 80px;
+  color: white;
+} */
+
+.main-carousel .flickity-prev-next-button.next {
+    right: 20px;
+}
+
+
+#select-carousel {
+    padding: 10px;
+    border: 1px solid;
+    margin: auto;
+    cursor: pointer;
+}
+
+.obj-group {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+    row-gap: 25px;
+}
+
+.obj {
+  padding: 20px;
+  font-size: 30px;
+  height: 200px;
+  position: relative;
+  z-index: 999;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: cover;
+  }
+
+  .obj-group .obj.obj-cell-1 {
+      background-image: url('https://test.growwithnoot.com/wp-content/uploads/2021/11/plant-food-microbe-1.jpg');
+  }
+
+  .obj-group .obj.obj-cell-2 {
+      background-image: url('https://test.growwithnoot.com/wp-content/uploads/2021/11/plant-food-microbe-2.jpg');
+  }
+
+  .obj-group .obj.obj-cell-3 {
+      background-image: url('https://test.growwithnoot.com/wp-content/uploads/2021/11/plant-food-microbe-3.jpg');
+  }
+
+  .obj-group .obj.obj-cell-4 {
+      background-image: url('https://test.growwithnoot.com/wp-content/uploads/2021/11/plant-food-microbe-4.jpg');
+  }
+
+  .obj-group .obj.obj-cell-5 {
+      background-image: url('https://test.growwithnoot.com/wp-content/uploads/2021/11/plant-food-microbe-5.jpg');
+  }
+
+  .obj-group .obj.obj-cell-6 {
+      background-image: url('https://test.growwithnoot.com/wp-content/uploads/2021/11/plant-food-microbe-6.jpg');
+  }
+
+.obj-group h3 {
+    font-family: "Lexend",sans-serif;
+    font-weight: 500;
+    display: block;
+    text-align: left;
+    margin-top: auto;
+    margin-bottom: 10px;
+    z-index: 1;
+    font-size: 1.625rem;
+    color: #00953B;
+}
+
+.obj-group p {
+    font-family: "Lexend", sans-serif;
+    color: #7A7A7A;
+    font-size: 0.975rem;
+    line-height: 1.25rem;
+    font-weight: 300;
+    text-align: left;
+    letter-spacing: 0px;
+    margin: 0px;
+    z-index: 1;
+}
+
+.obj-group span.country {
+    font-family: "Lexend", sans-serif;
+    color: #7A7A7A;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+    text-align: left;
+    letter-spacing: 0px;
+    margin: 0px;
+    position: absolute;
+    bottom: 20px;
+    z-index: 1;
+}
+
+.obj-group .icon-plus {
+    position: absolute;
+    bottom: 20px;
+    right: 24px;
+    margin: 0px;
+    z-index: 1;
+    height: 24px;
+    width: 24px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    background-color: rgba(20, 43, 111, 0.24);
+    border-radius: 50%;
+}
+
+.main-carousel .flickity-viewport.is-expanded {
+  height: 600px !important;
+}
+
+.main-carousel .flickity-viewport.is-expanded {
+  width: 70% !important;
+}
+
+.main-carousel.flickity-enabled {
+   position: fixed; 
+  /*position: relative;*/
+  }
+
+@media screen and (min-width: 300px) and (max-width: 500px) {
+  .obj-group {
+      grid-template-columns: auto;
+  }
+}
+
+@media screen and (max-width: 749px) {
+  /* .main-carousel .flickity-viewport {
+      
+  }
+
+  .main-carousel .flickity-slider {
+      
+  } */
+
+  .main-carousel .carousel-cell {
+      padding: 40px 50px 40px;
+      margin-right: 10px;
+  }
+  .main-carousel .carousel-cell a {
+      bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  /* .main-carousel .flickity-viewport {
+      
+  }
+
+  .main-carousel .flickity-slider {
+      
+  } */
+
+  .main-carousel .carousel-cell {
+      padding: 25px 30px 25px;
+      margin-right: 10px;
+  }
+
+  .main-carousel .carousel-cell a {
+      bottom: 25px;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .main-carousel .carousel-cell {
+      padding: 40px 50px 40px;
+  }
+
+  .main-carousel .carousel-cell a {
+      bottom: 40px;
+  }
+
+  .main-carousel .carousel-cell .close {
+      right: 24px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .main-carousel .carousel-cell {
+      padding: 48px 50px 48px;
+      margin-right: 10px;
+  }
+
+  .main-carousel .carousel-cell p.gram { 
+      margin-bottom: 24px;
+      padding-bottom: 24px;
+  }
+
+  .main-carousel .carousel-cell p.description {
+      margin-bottom: 32px;
+  }
+
+  .main-carousel .carousel-cell a {
+      bottom: 48px;
+  }
+}
+
+@media screen and (min-width: 501px) and (max-width: 1000px) {
+  .obj-group {
+      grid-template-columns: auto auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+ .main-carousel  .carousel-cell {
+      padding: 48px 90px 48px;
+  }
+
+  .main-carousel .carousel-cell a {
+      bottom: 48px;
+      /* left: 100px; */
+  }
+}
+
+@media screen and (max-width: 767px) {
+    .main-carousel .flickity-viewport {
+        /*width: 100%;*/
+        height: 600px !important;
+    }
+    .main-carousel .carousel-cell .content {
+        height: 100%;
+    }
+    
+    .main-carousel .carousel-cell p.support {
+        line-height: 0.9rem;
+          margin-bottom: 10px;
+    }
+    
+    .main-carousel .carousel-cell {
+      width: 75%;
+      /*height: 90%;*/
+      margin-right: 20px;
+      /*border-radius: 0px;*/
+      /*background-repeat: no-repeat;*/
+      /*background-position: right;*/
+      /*background-size: cover;*/
+      /*background-color: #f8f8fa;*/
+    }
+    
+    .main-carousel .flickity-prev-next-button.next {
+        right: 10px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .banner-section .elementor-container.elementor-column-gap-no {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
